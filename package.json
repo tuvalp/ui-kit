@@ -7,7 +7,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc"
+    "build": "tsc && node copy-css.mjs"
   },
   "peerDependencies": {
     "react": "^19.1.0",

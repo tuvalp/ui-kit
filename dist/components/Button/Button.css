@@ -1,0 +1,161 @@
+/* Base button styles */
+.btn {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  background-color: transparent;
+}
+
+/* ===========================
+   VARIANT: PRIMARY
+=========================== */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-onPrimary);
+  padding: 0 16px;
+  border-radius: 6px;
+  height: 40px;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-accent);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ===========================
+   VARIANT: SECONDARY
+=========================== */
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-onSecondary);
+  padding: 0 16px;
+  border-radius: 6px;
+  height: 40px;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-accent);
+}
+
+/* ===========================
+   VARIANT: GHOST
+=========================== */
+.btn-ghost {
+  border: 1px solid var(--color-primary);
+  background-color: transparent;
+  color: var(--color-primary);
+  padding: 0 16px;
+  border-radius: 6px;
+  height: 40px;
+}
+
+.btn-ghost:hover {
+  background-color: rgba(0, 136, 255, 0.1);
+}
+
+/* ===========================
+   VARIANT: COLUMN (your style)
+=========================== */
+.btn-column {
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 14px 0;
+  color: var(--color-onSurface);
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-column:hover {
+  background-color: #f0f0f0;
+}
+
+.btn-column.btn-active {
+  color: var(--color-primary);
+  background-color: var(--color-gray-400);
+}
+
+/* Optional sizes (not mandatory for column) */
+.btn-small {
+  font-size: 14px;
+}
+
+.btn-medium {
+  font-size: 15px;
+}
+
+.btn-large {
+  font-size: 16px;
+}
+
+/* Optional loading state (not mandatory for column) */
+.btn-loading {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.btn-outline {
+  border: 1px solid var(--color-border);
+  background-color: transparent;
+  color: #333;
+  padding: 16px 6px;
+  border-radius: 6px;
+  box-shadow: var(--box-shadow-md);
+}
+
+.btn-outline:hover {
+  scale: 1.02;
+  opacity: 0.8;
+  border: 1px solid var(--color-border);
+  background-color: var(--color--gray-100);
+}
+
+.btn-icon {
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-icon:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn-text {
+  background-color: transparent;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  color: var(--color-gray-500);
+}
+
+.btn-text:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn-transparent {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+}
+

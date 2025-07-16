@@ -1,0 +1,18 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  flex: 1;
+}
+
+.list > .list-item:only-child {
+  border-bottom: none;
+}
+
+.list > .list-item:last-child {
+  border-bottom: none;
+}
+
+.list > .list-item {
+  border-bottom: 1px solid #e5e5e5;
+}

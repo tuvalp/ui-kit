@@ -1,0 +1,55 @@
+.toggle-button-group {
+  display: inline-flex;            
+  flex-direction: row;
+  border-radius: 24px;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.05),
+    0 4px 8px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+  padding: 6px;
+}
+
+.toggle-button-group.vertical {
+  flex-direction: column;
+}
+
+/* Optional: hover feedback */
+.toggle-button-group > button:first-child {
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+.toggle-button-group > button:last-child {
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+
+/* Button base */
+.toggle-button-group button {
+  background-color: transparent;
+  color: var(--color-gray-400);
+  border: none;
+  padding: 10px 14px;
+  font-weight: 500;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+
+.toggle-button-group.icon button {
+  padding: 14px 14px;
+
+}
+
+
+.toggle-button-group button.active {
+  font-weight: 600;
+  box-shadow: var(--shadow-lg);
+  color: var(--color-primary);
+}
+
+/* Optional: hover feedback */
+.toggle-button-group button:hover:not(.active) {
+  background-color: #f0f0f0;
+}
