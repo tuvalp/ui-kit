@@ -1,0 +1,23 @@
+.text {
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/* Sizes */
+.text-xs { font-size: 12px; }
+.text-sm { font-size: 14px; }
+.text-md { font-size: 16px; }
+.text-lg { font-size: 20px; }
+.text-xl { font-size: 36px; }
+
+/* Weights */
+.text-light { font-weight: 300; }
+.text-normal { font-weight: 400; }
+.text-medium { font-weight: 500; }
+.text-bold { font-weight: 700; }
+
+/* Alignments */
+.text-align-left { text-align: left; }
+.text-align-center { text-align: center; }
+.text-align-right { text-align: right; }

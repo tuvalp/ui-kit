@@ -1,0 +1,49 @@
+.number-pad {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: var(--color-surface);
+  width: 100%;
+  max-width: 320px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.number-pad-row {
+  display: flex;
+  gap: 2px;
+  width: 100%;
+}
+
+.number-pad-key {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 48px;
+  font-size: 1.5rem;
+  border: none;
+  background: var(--color-gray-100);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.number-pad-key:active {
+  background: var(--color-accent);
+  color: var(--color-onPrimary);
+}
+
+.number-pad-key.del {
+  background: var(--color-onDanger);
+  color: var(--color-danger);
+}
+
+.number-pad-key.ok {
+  background: var(--color-primary);
+  color: var(--color-onPrimary);
+}
+
+.number-pad-key:disabled {
+  background: #eee;
+  color: #aaa;
+  cursor: not-allowed;
+}
