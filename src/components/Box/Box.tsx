@@ -16,7 +16,7 @@ interface BoxProps {
   style?: React.CSSProperties;
 }
 
-export  function Box({
+export default function Box({
   children,
   position = "unset",
   wihth,

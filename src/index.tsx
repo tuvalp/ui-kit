@@ -28,7 +28,7 @@ export * from "./components/Input/Input"
 
 export * from "./components/Flex/Flex"
 
-export * from "./components/Box/Box"
+export { default as Box } from "./components/Box/Box"
 export * from "./components/Divider/Divider"
 
 export * from "./components/Modal/Modal"
