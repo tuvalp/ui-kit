@@ -13,6 +13,8 @@ interface ToggleButtonGroupProps {
   vertical?: boolean;
   onChange?: (value: string | number | (string | number)[]) => void;
   multiple?: boolean;
+  style?: React.CSSProperties
+  optionStyle?: React.CSSProperties
 }
 
 export  function ToggleButtonGroup({
@@ -21,6 +23,8 @@ export  function ToggleButtonGroup({
   vertical = false,
   onChange,
   multiple = false,
+  style,
+  optionStyle
 }: ToggleButtonGroupProps) {
   const [internalValue, setInternalValue] = useState<typeof value>(
     value ?? (multiple ? [] : "")
@@ -49,10 +53,11 @@ export  function ToggleButtonGroup({
 
   return (
     <div>
-      <div className={`toggle-button-group ${vertical ? "vertical" : ""} ${options[0].icon ? "icon" : ""}`}>
+      <div className={`toggle-button-group ${vertical ? "vertical" : ""} ${options[0].icon ? "icon" : ""}`} style={style}>
         {options.map((opt) => (
           <button
             key={opt.value}
+            style={optionStyle}
             className={isSelected(opt.value) ? "active" : ""}
             onClick={() => handleClick(opt.value)}
           >
