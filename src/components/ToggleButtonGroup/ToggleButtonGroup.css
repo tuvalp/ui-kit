@@ -28,6 +28,11 @@
 }
 
 
+.toggle-button-group.icon button {
+  padding: 14px 14px;
+
+}
+
 
 .toggle-button-group button.active {
   font-weight: 600;
