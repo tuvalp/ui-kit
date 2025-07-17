@@ -13,6 +13,7 @@ interface BoxProps {
   left?: string;
   right?: string;
   bottom?: string;
+  zIndex?: number;
   style?: React.CSSProperties;
 }
 
@@ -29,6 +30,7 @@ export default function Box({
   left,
   right,
   bottom,
+  zIndex,
   style,
   ...rest
 }: BoxProps) {
@@ -48,6 +50,7 @@ export default function Box({
         left,
         right,
         bottom,
+        zIndex,
         ...style,
       }}
     >
