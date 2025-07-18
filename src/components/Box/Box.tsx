@@ -15,6 +15,7 @@ interface BoxProps {
   bottom?: string;
   zIndex?: number;
   style?: React.CSSProperties;
+  rest: any;
 }
 
 export default function Box({

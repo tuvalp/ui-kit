@@ -14,6 +14,7 @@ interface BoxProps {
     bottom?: string;
     zIndex?: number;
     style?: React.CSSProperties;
+    rest: any;
 }
 export default function Box({ children, position, wihth, height, background, elvated, padding, margin, top, left, right, bottom, zIndex, style, ...rest }: BoxProps): import("react/jsx-runtime").JSX.Element;
 export {};
