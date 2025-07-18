@@ -1,9 +1,9 @@
-import type { ReactNode } from "react";
+import type { ReactNode, HTMLAttributes } from "react";
 
-interface BoxProps {
+interface BoxProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode;
   position?: "absolute" | "relative" | "fixed | sticky | static | initial | inherit" | "unset";
-  wihth?: string;
+  width?: string;
   height?: string;
   background?: string;
   elvated?: boolean;
@@ -21,7 +21,7 @@ interface BoxProps {
 export default function Box({
   children,
   position = "unset",
-  wihth,
+  width,
   height,
   background = "var(--color-surface)",
   elvated = false,
@@ -42,7 +42,7 @@ export default function Box({
         position: "absolute",
         display: "flex",
         boxShadow: elvated ? "var(--shadow-md)" : "none",
-        width: wihth,
+        width: width,
         height,
         background,
         padding,

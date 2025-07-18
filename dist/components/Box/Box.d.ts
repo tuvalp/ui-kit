@@ -1,8 +1,8 @@
-import type { ReactNode } from "react";
-interface BoxProps {
+import type { ReactNode, HTMLAttributes } from "react";
+interface BoxProps extends HTMLAttributes<HTMLDivElement> {
     children: ReactNode;
     position?: "absolute" | "relative" | "fixed | sticky | static | initial | inherit" | "unset";
-    wihth?: string;
+    width?: string;
     height?: string;
     background?: string;
     elvated?: boolean;
@@ -16,5 +16,5 @@ interface BoxProps {
     style?: React.CSSProperties;
     rest: any;
 }
-export default function Box({ children, position, wihth, height, background, elvated, padding, margin, top, left, right, bottom, zIndex, style, ...rest }: BoxProps): import("react/jsx-runtime").JSX.Element;
+export default function Box({ children, position, width, height, background, elvated, padding, margin, top, left, right, bottom, zIndex, style, ...rest }: BoxProps): import("react/jsx-runtime").JSX.Element;
 export {};
