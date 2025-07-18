@@ -15,7 +15,6 @@ interface BoxProps extends HTMLAttributes<HTMLDivElement> {
   bottom?: string;
   zIndex?: number;
   style?: React.CSSProperties;
-  rest: any;
 }
 
 export default function Box({
