@@ -1,15 +1,18 @@
 import React from "react";
 
 interface IconProps extends React.HTMLAttributes<HTMLElement> {
-  name: string; // e.g. "fa-solid fa-user"
-  size?: number; // optional size in px
+  name: string; 
+  fullName?: boolean;
+  size?: number; 
   color?: string;
   type?: "solid" | "regular" | "light";
   spin?: boolean
+
 }
 
 export function Icon({
   name,
+  fullName = false,
   size = 16,
   color = "#333",
   type = "solid",
@@ -25,7 +28,7 @@ export function Icon({
       />
 
       <i
-        className={`fa-${type} fa-${name} ${spin ? "fa-spin" : ""}`}
+        className={`fa-${type} ${fullName ? `${name}` : `fa-${name}`}  ${spin ? "fa-spin" : ""}`}
         style={{
           fontSize: size,
           color,
@@ -36,4 +39,5 @@ export function Icon({
       />
     </>
   );
+
 }
