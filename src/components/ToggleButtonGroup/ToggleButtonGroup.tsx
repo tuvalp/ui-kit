@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./ToggleButtonGroup.css";
 import { Icon } from "../Icon/Icon";
 interface ToggleOption {
@@ -29,6 +29,10 @@ export  function ToggleButtonGroup({
   const [internalValue, setInternalValue] = useState<typeof value>(
     value ?? (multiple ? [] : "")
   );
+
+  useEffect(() => {
+    setInternalValue(value);
+  }, [value]);
 
   const isSelected = (val: string | number) => {
     return multiple

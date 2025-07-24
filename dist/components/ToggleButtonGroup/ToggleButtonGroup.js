@@ -1,9 +1,12 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./ToggleButtonGroup.css";
 import { Icon } from "../Icon/Icon";
 export function ToggleButtonGroup({ options, value, vertical = false, onChange, multiple = false, style, optionStyle }) {
     const [internalValue, setInternalValue] = useState(value ?? (multiple ? [] : ""));
+    useEffect(() => {
+        setInternalValue(value);
+    }, [value]);
     const isSelected = (val) => {
         return multiple
             ? Array.isArray(internalValue) && internalValue.includes(val)
